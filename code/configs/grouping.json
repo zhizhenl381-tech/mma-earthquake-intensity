@@ -1,0 +1,11 @@
+{
+  "epicenter_latitude": 22.0,
+  "epicenter_longitude": 96.0,
+  "strong_radius_km": 150,
+  "population_threshold_per_km2": 500,
+  "text_visual_share_upper": 0.4,
+  "visual_visual_share_lower": 0.6,
+  "replay_source": "网格与分组.xlsx",
+  "group_seed": 2026102018,
+  "noise_seed": 2026102019
+}

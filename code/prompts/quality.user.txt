@@ -1,0 +1,39 @@
+Target event information:
+- Event region: {TARGET_EVENT_REGION}
+- Event time window: {TARGET_EVENT_TIME_WINDOW}
+
+Structured evidence:
+{EVIDENCE_JSON}
+
+Quality-label definitions:
+INRE: information relevance defect. Set INRE=1 if the post content is not clearly related to earthquake impacts, or if text and visual/audio evidence are inconsistent. Otherwise set INRE=0.
+INRY: information reliability defect. Set INRY=1 if the available evidence is too vague or insufficient to support intensity-related item extraction. Otherwise set INRY=0.
+LOCY: location certainty defect. Set LOCY=1 if the location is ambiguous, available only at broad city/region scale, or has an uncertainty radius greater than 5 km. Otherwise set LOCY=0.
+INAY: information authenticity defect. Set INAY=1 if the post may refer to another event, duplicated/non-original content, misinformation, unverifiable material, or content not clearly associated with the target earthquake. Otherwise set INAY=0.
+
+Task:
+Assign the four binary labels. Use only evidence pointers from the structured evidence file. If evidence is insufficient, prefer assigning the relevant defect rather than guessing.
+
+Return valid JSON only:
+{
+  "post_id": "{POST_ID}",
+  "quality_labels": {
+    "INRE": 0,
+    "INRY": 0,
+    "LOCY": 0,
+    "INAY": 0,
+    "four_bit_vector": "0000"
+  },
+  "evidence_pointers": {
+    "INRE": ["..."],
+    "INRY": ["..."],
+    "LOCY": ["..."],
+    "INAY": ["..."]
+  },
+  "rationale": {
+    "INRE": "brief evidence-based explanation",
+    "INRY": "brief evidence-based explanation",
+    "LOCY": "brief evidence-based explanation",
+    "INAY": "brief evidence-based explanation"
+  }
+}

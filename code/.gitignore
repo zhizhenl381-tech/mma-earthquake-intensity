@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+results/
+model_runs/
+*.egg-info/
+build/
+dist/

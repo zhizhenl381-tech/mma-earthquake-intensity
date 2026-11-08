@@ -1,0 +1,21 @@
+{
+  "crs_input": "EPSG:4326",
+  "projection": "WGS84 UTM, zone determined by longitude unless supplied",
+  "grid_sizes_m": [
+    1000,
+    10000
+  ],
+  "high_precision_max_radius_km": 0.5,
+  "medium_precision_max_radius_km": 5,
+  "location_coefficients": [
+    1.0,
+    0.5,
+    0.2
+  ],
+  "grid_origin_m": [
+    0,
+    0
+  ],
+  "grid_membership": "High precision: 1km and parent 10km; medium precision: 10km; low precision: supplied community",
+  "replay_membership": "Read released grid IDs and location coefficients directly"
+}

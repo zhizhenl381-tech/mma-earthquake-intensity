@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string"
+    },
+    "quality_labels": {
+      "type": "object",
+      "properties": {
+        "INRE": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "INRY": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "LOCY": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "INAY": {
+          "type": "integer",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "four_bit_vector": {
+          "type": "string",
+          "pattern": "^[01]{4}$"
+        }
+      },
+      "required": [
+        "INRE",
+        "INRY",
+        "LOCY",
+        "INAY",
+        "four_bit_vector"
+      ],
+      "additionalProperties": false
+    },
+    "evidence_pointers": {
+      "type": "object",
+      "properties": {
+        "INRE": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "INRY": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "LOCY": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "INAY": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "INRE",
+        "INRY",
+        "LOCY",
+        "INAY"
+      ],
+      "additionalProperties": false
+    },
+    "rationale": {
+      "type": "object",
+      "properties": {
+        "INRE": {
+          "type": "string"
+        },
+        "INRY": {
+          "type": "string"
+        },
+        "LOCY": {
+          "type": "string"
+        },
+        "INAY": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "INRE",
+        "INRY",
+        "LOCY",
+        "INAY"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "post_id",
+    "quality_labels",
+    "evidence_pointers",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

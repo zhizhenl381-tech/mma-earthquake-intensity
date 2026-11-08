@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string"
+    },
+    "dyfi_items": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "enum": [
+              "item_1",
+              "item_2",
+              "item_3",
+              "item_4",
+              "item_5",
+              "item_6",
+              "item_7",
+              "item_8"
+            ]
+          },
+          "item_name": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "evidence_pointers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "item_id",
+          "item_name",
+          "answer",
+          "evidence_pointers",
+          "rationale"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "quality_flags_for_item_extraction": {
+      "type": "object",
+      "properties": {
+        "insufficient_evidence_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ambiguous_evidence_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "insufficient_evidence_items",
+        "ambiguous_evidence_items"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "post_id",
+    "dyfi_items",
+    "quality_flags_for_item_extraction"
+  ],
+  "additionalProperties": false
+}

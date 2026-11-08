@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "text": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "ocr": {
+      "type": "array"
+    },
+    "asr": {
+      "type": "array"
+    },
+    "geolocation": {
+      "type": "object",
+      "properties": {
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -80,
+          "maximum": 84
+        },
+        "radius_km": {
+          "type": "number",
+          "minimum": 0
+        },
+        "utm_zone": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "community_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "longitude",
+        "latitude",
+        "radius_km"
+      ],
+      "additionalProperties": false
+    },
+    "preliminary_include": {
+      "type": "boolean"
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "file_uri": {
+            "type": "string"
+          },
+          "mime_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "mime_type"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "post_id",
+    "post_time",
+    "text"
+  ],
+  "additionalProperties": false
+}

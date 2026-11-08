@@ -1,0 +1,53 @@
+{
+  "representation": {
+    "provider": "gemini",
+    "model": "gemini-3-pro-preview",
+    "model_env": "MMA_GEMINI_MODEL",
+    "api_key_env": "GEMINI_API_KEY",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "retry_limit": 3,
+    "timeout_seconds": 180
+  },
+  "quality": {
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "model_env": "MMA_OPENAI_MODEL",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": "https://api.openai.com/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 1024,
+    "retry_limit": 2,
+    "timeout_seconds": 180,
+    "reasoning_effort": "none"
+  },
+  "items": {
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "model_env": "MMA_OPENAI_MODEL",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": "https://api.openai.com/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2048,
+    "retry_limit": 2,
+    "timeout_seconds": 180,
+    "reasoning_effort": "none"
+  },
+  "baseline": {
+    "provider": "openai",
+    "model": "gpt-5.2",
+    "model_env": "MMA_OPENAI_MODEL",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url": "https://api.openai.com/v1",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 1024,
+    "retry_limit": 2,
+    "timeout_seconds": 180,
+    "reasoning_effort": "none"
+  }
+}

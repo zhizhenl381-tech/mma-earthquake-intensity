@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "estimate_type": {
+      "const": "LLM_CDI_baseline"
+    },
+    "post_or_grid_id": {
+      "type": "string"
+    },
+    "estimated_cdi": {
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 2,
+          "maximum": 9
+        },
+        {
+          "const": "unknown"
+        }
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "evidence_pointers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "estimate_type",
+    "post_or_grid_id",
+    "estimated_cdi",
+    "confidence",
+    "evidence_pointers",
+    "rationale"
+  ],
+  "additionalProperties": false
+}

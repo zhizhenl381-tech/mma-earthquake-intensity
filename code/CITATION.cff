@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated manuscript."
+title: "MMA: Multimodal evidence processing and DYFI intensity aggregation"
+type: software
+version: 1.0.1
+repository-code: "https://github.com/zhizhenl381-tech/mma-earthquake-intensity"
+authors:
+  - family-names: Li
+    given-names: Zhizhen
+    affiliation: Beijing University of Technology
+  - family-names: Ma
+    given-names: Donghui
+    affiliation: Beijing University of Technology
+keywords:
+  - earthquake intensity
+  - social media
+  - DYFI
+  - multimodal

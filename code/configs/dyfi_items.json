@@ -1,0 +1,195 @@
+{
+  "version": "mma-eight-item-1.0",
+  "score_basis": "USGS DYFI Scientific Background, Appendix I: coefficients and index ranges",
+  "answer_labels": "Operational closed-world labels defined in this release",
+  "unknown": "unknown",
+  "item_weights": [
+    5,
+    1,
+    1,
+    2,
+    5,
+    2,
+    3,
+    5
+  ],
+  "entirely_unknown_item": "Omit its contribution from the available-item sum; all unknown yields null",
+  "items": [
+    {
+      "item_id": "item_1",
+      "name": "felt",
+      "question": "Did you feel it?",
+      "weight": 5,
+      "answers": {
+        "not_felt": {
+          "score": 0,
+          "description": "No felt report"
+        },
+        "some_people_felt": {
+          "score": 0.33,
+          "description": "Only some people felt shaking"
+        },
+        "most_people_felt": {
+          "score": 0.66,
+          "description": "Most people felt shaking"
+        },
+        "felt": {
+          "score": 1,
+          "description": "Shaking was felt"
+        }
+      }
+    },
+    {
+      "item_id": "item_2",
+      "name": "shaking",
+      "question": "How would you describe the shaking?",
+      "weight": 1,
+      "answers": {
+        "not_felt": {
+          "score": 0,
+          "description": "Not felt"
+        },
+        "weak": {
+          "score": 1,
+          "description": "Weak"
+        },
+        "mild": {
+          "score": 2,
+          "description": "Mild"
+        },
+        "moderate": {
+          "score": 3,
+          "description": "Moderate"
+        },
+        "strong": {
+          "score": 4,
+          "description": "Strong"
+        },
+        "violent": {
+          "score": 5,
+          "description": "Violent"
+        }
+      }
+    },
+    {
+      "item_id": "item_3",
+      "name": "reaction",
+      "question": "How did you react?",
+      "weight": 1,
+      "answers": {
+        "no_reaction": {
+          "score": 0,
+          "description": "No reaction or not felt"
+        },
+        "very_little": {
+          "score": 1,
+          "description": "Very little reaction"
+        },
+        "excitement": {
+          "score": 2,
+          "description": "Excitement"
+        },
+        "somewhat_frightened": {
+          "score": 3,
+          "description": "Somewhat frightened"
+        },
+        "very_frightened": {
+          "score": 4,
+          "description": "Very frightened"
+        },
+        "extremely_frightened": {
+          "score": 5,
+          "description": "Extremely frightened"
+        }
+      }
+    },
+    {
+      "item_id": "item_4",
+      "name": "standing",
+      "question": "Was it difficult to stand or walk?",
+      "weight": 2,
+      "answers": {
+        "no": {
+          "score": 0,
+          "description": "Explicitly no difficulty"
+        },
+        "yes": {
+          "score": 1,
+          "description": "Difficulty standing or walking"
+        }
+      }
+    },
+    {
+      "item_id": "item_5",
+      "name": "shelf_objects",
+      "question": "Did objects rattle, topple or fall off shelves?",
+      "weight": 5,
+      "answers": {
+        "no": {
+          "score": 0,
+          "description": "Explicitly no object effects"
+        },
+        "yes": {
+          "score": 1,
+          "description": "Rattling, toppling or falling objects documented"
+        }
+      }
+    },
+    {
+      "item_id": "item_6",
+      "name": "pictures",
+      "question": "Did pictures move or get knocked askew?",
+      "weight": 2,
+      "answers": {
+        "no": {
+          "score": 0,
+          "description": "Explicitly no picture movement"
+        },
+        "yes": {
+          "score": 1,
+          "description": "Picture movement or displacement documented"
+        }
+      }
+    },
+    {
+      "item_id": "item_7",
+      "name": "furniture",
+      "question": "Did furniture slide, topple or become displaced?",
+      "weight": 3,
+      "answers": {
+        "no": {
+          "score": 0,
+          "description": "Explicitly no furniture displacement"
+        },
+        "yes": {
+          "score": 1,
+          "description": "Furniture displacement documented"
+        }
+      }
+    },
+    {
+      "item_id": "item_8",
+      "name": "damage",
+      "question": "Was there damage to the building?",
+      "weight": 5,
+      "answers": {
+        "none": {
+          "score": 0,
+          "description": "Explicitly no building damage"
+        },
+        "light": {
+          "score": 1,
+          "description": "Light building damage"
+        },
+        "moderate": {
+          "score": 2,
+          "description": "Moderate building damage"
+        },
+        "substantial": {
+          "score": 3,
+          "description": "Substantial building damage"
+        }
+      }
+    }
+  ]
+}

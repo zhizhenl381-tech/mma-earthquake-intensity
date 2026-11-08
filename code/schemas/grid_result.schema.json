@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "grid_id": {
+      "type": "string"
+    },
+    "scale_km": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "cdi": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ess": {
+      "type": "number",
+      "minimum": 1
+    },
+    "ci_low": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ci_high": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "grid_id",
+    "scale_km",
+    "cdi",
+    "ess",
+    "ci_low",
+    "ci_high"
+  ],
+  "additionalProperties": true
+}

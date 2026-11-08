@@ -1,0 +1,19 @@
+{
+  "seed": 2026102017,
+  "bootstrap_replicates": 200,
+  "rs_bootstrap_replicates": 50,
+  "family_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "calibration": {
+    "gamma": 0.5,
+    "kappa_min": 0.5,
+    "kappa_max": 1.5,
+    "eta_min": 0.8,
+    "eta_max": 1.4,
+    "a": 1.0,
+    "b": 0.5
+  }
+}

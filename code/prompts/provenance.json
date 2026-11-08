@@ -1,0 +1,33 @@
+{
+  "templates": [
+    {
+      "module": "representation",
+      "source": "Appendix.docx",
+      "section": "D1",
+      "system_sha256": "ad0df6b3f4f361451bcecee49b50b168246d45bd2fae0f01c08841affe40d4a9",
+      "user_sha256": "800fd7c6ed6575a544e96c3ce2eaddfb026c7d8ea6c3550342ee8931e4a4bf8c"
+    },
+    {
+      "module": "quality",
+      "source": "Appendix.docx",
+      "section": "D2",
+      "system_sha256": "09767c3981253d91cd10794ee5d3d9e8ecc473b74639cf16c9f5116a3f0162f2",
+      "user_sha256": "dfeee98c04388338136386fc1618a43d425823d99968d06effb5f675fb1d0330"
+    },
+    {
+      "module": "items",
+      "source": "Appendix.docx",
+      "section": "D3",
+      "system_sha256": "039ad92b7e50a8e44dfcf804899e150125ec5148ceda4635901cd81c6c01f829",
+      "user_sha256": "a16e6fcbc6f39b13588d92dba22fc78f98ccc7ac411714bc526836536268989e"
+    },
+    {
+      "module": "baseline",
+      "source": "Appendix.docx",
+      "section": "D4",
+      "system_sha256": "bd3f08b75af4cd3b12e4490bef49040cd9137c0cbac104c463fcefb9a939e430",
+      "user_sha256": "7bb9c1f017fb90c7e8bfc065b08a02ff1b8c5cf34c0340619a83628b891d7162"
+    }
+  ],
+  "instantiated_prompts": "Written to model_calls/calls.jsonl on each new run"
+}

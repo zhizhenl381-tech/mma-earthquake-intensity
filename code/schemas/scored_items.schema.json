@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string"
+    },
+    "item_scores": {
+      "type": "object",
+      "properties": {
+        "item_1": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_2": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_3": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_4": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_5": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_6": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_7": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "item_8": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7",
+        "item_8"
+      ],
+      "additionalProperties": false
+    },
+    "item_vector": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    },
+    "available_item_cws": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "known_items": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    }
+  },
+  "required": [
+    "post_id",
+    "item_scores",
+    "item_vector",
+    "available_item_cws",
+    "known_items"
+  ],
+  "additionalProperties": false
+}

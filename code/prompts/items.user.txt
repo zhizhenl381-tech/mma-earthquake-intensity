@@ -1,0 +1,43 @@
+Post ID: {POST_ID}
+Structured evidence:
+{EVIDENCE_JSON}
+
+Closed-world DYFI item schema:
+{DYFI_ITEM_SCHEMA}
+
+Task:
+For each item in the schema:
+1. Select exactly one answer from the candidate set or "unknown".
+2. Provide evidence pointers supporting the answer.
+3. Provide a brief rationale.
+4. Do not infer unobserved effects from general earthquake knowledge.
+
+Return valid JSON only:
+{
+  "post_id": "{POST_ID}",
+  "dyfi_items": [
+    {
+      "item_id": "item_1",
+      "item_name": "...",
+      "answer": "one candidate answer or unknown",
+      "evidence_pointers": ["..."],
+      "rationale": "brief evidence-based explanation"
+    },
+    {
+      "item_id": "item_2",
+      "item_name": "...",
+      "answer": "one candidate answer or unknown",
+      "evidence_pointers": ["..."],
+      "rationale": "brief evidence-based explanation"
+    }
+  ],
+  "quality_flags_for_item_extraction": {
+    "insufficient_evidence_items": ["item_id"],
+    "ambiguous_evidence_items": ["item_id"]
+  }
+}
+
+Validation rules:
+- Every item must contain exactly one valid answer or "unknown".
+- Every non-unknown answer must include at least one evidence pointer.
+- Answers unsupported by evidence must be replaced with "unknown".

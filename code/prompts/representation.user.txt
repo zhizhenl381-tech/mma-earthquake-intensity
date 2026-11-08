@@ -1,0 +1,80 @@
+Post ID: {POST_ID}
+Post time: {POST_TIME}
+Available metadata: {METADATA}
+Text content: {POST_TEXT}
+Images/video frames: {VISUAL_INPUTS}
+Audio/video stream: {AUDIO_INPUTS}
+OCR input, if already available: {OCR_INPUT}
+ASR input, if already available: {ASR_INPUT}
+
+Task:
+Extract only verifiable evidence from the provided content. Return objective descriptions with evidence pointers. If a modality is unavailable or uninformative, return null or an empty list. Do not assign CDI, MMI, DYFI item scores, or damage grades.
+
+Return valid JSON only:
+{
+  "post_id": "{POST_ID}",
+  "text": {
+    "original_or_translated_text": "...",
+    "earthquake_related_terms": [
+      {
+        "term": "...",
+        "evidence_pointer": "text_span:start-end"
+      }
+    ]
+  },
+  "asr": [
+    {
+      "transcript": "...",
+      "time_range": "start-end seconds",
+      "evidence_pointer": "audio_segment:start-end"
+    }
+  ],
+  "ocr": [
+    {
+      "text": "...",
+      "location_in_media": "...",
+      "evidence_pointer": "frame_id/region"
+    }
+  ],
+  "image_captions": [
+    {
+      "description": "...",
+      "visible_shaking_or_damage_clues": ["..."],
+      "evidence_pointer": "image_id/region"
+    }
+  ],
+  "video_captions": [
+    {
+      "description": "...",
+      "visible_shaking_or_damage_clues": ["..."],
+      "time_range": "start-end seconds",
+      "evidence_pointer": "frame_id/time_range"
+    }
+  ],
+  "audio_events": [
+    {
+      "event": "...",
+      "time_range": "start-end seconds",
+      "confidence": "low|medium|high",
+      "evidence_pointer": "audio_segment:start-end"
+    }
+  ],
+  "location_evidence": {
+    "place_names": [
+      {
+        "name": "...",
+        "source": "text|ocr|metadata|speech",
+        "evidence_pointer": "..."
+      }
+    ],
+    "explicit_coordinates": "... or null",
+    "location_uncertainty_description": "..."
+  },
+  "time_evidence": {
+    "posting_time": "{POST_TIME}",
+    "event_time_reference_in_post": "... or null"
+  },
+  "uncertainties": [
+    "..."
+  ]
+}

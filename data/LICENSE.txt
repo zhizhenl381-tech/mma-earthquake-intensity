@@ -1,0 +1,16 @@
+Creative Commons Attribution 4.0 International
+SPDX identifier: CC-BY-4.0
+
+Copyright (c) 2026 Zhizhen Li and Donghui Ma
+
+The tabular data accompanying this release are licensed under the Creative
+Commons Attribution 4.0 International License. You may share and adapt the
+licensed material under the terms of that license, including attribution,
+a link to the license, and an indication of modifications.
+
+License and legal code
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution should identify Zhizhen Li and Donghui Ma, this MMA release,
+version 1.0.1, and https://github.com/zhizhenl381-tech/mma-earthquake-intensity.

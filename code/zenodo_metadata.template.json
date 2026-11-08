@@ -1,0 +1,26 @@
+{
+  "title": "MMA: Multimodal evidence processing and DYFI intensity aggregation",
+  "upload_type": "software",
+  "description": "Python implementation of MMA evidence representation, quality assessment, DYFI item scoring, UTM aggregation, ESS, weighted bootstrap and final-data experiment replay.",
+  "creators": [
+    {
+      "name": "Li, Zhizhen",
+      "affiliation": "Beijing University of Technology"
+    },
+    {
+      "name": "Ma, Donghui",
+      "affiliation": "Beijing University of Technology"
+    }
+  ],
+  "keywords": [
+    "earthquake intensity",
+    "social media",
+    "multimodal",
+    "DYFI",
+    "MMA",
+    "reproducibility"
+  ],
+  "version": "1.0.1",
+  "language": "eng",
+  "access_right": "open"
+}

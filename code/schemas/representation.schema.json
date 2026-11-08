@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string"
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "original_or_translated_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "earthquake_related_terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "evidence_pointer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "evidence_pointer"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "original_or_translated_text",
+        "earthquake_related_terms"
+      ],
+      "additionalProperties": true
+    },
+    "asr": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_pointer"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "ocr": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_pointer"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "image_captions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_pointer"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "video_captions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_pointer"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "audio_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_pointer": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_pointer"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "location_evidence": {
+      "type": "object",
+      "properties": {
+        "place_names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "evidence_pointer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "evidence_pointer"
+            ],
+            "additionalProperties": true
+          }
+        },
+        "explicit_coordinates": {
+          "type": [
+            "string",
+            "object",
+            "null"
+          ]
+        },
+        "location_uncertainty_description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "place_names",
+        "explicit_coordinates",
+        "location_uncertainty_description"
+      ],
+      "additionalProperties": true
+    },
+    "time_evidence": {
+      "type": "object",
+      "properties": {
+        "posting_time": {
+          "type": "string"
+        },
+        "event_time_reference_in_post": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "posting_time",
+        "event_time_reference_in_post"
+      ],
+      "additionalProperties": true
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "post_id",
+    "text",
+    "asr",
+    "ocr",
+    "image_captions",
+    "video_captions",
+    "audio_events",
+    "location_evidence",
+    "time_evidence",
+    "uncertainties"
+  ],
+  "additionalProperties": true
+}
